@@ -8,6 +8,7 @@ const Repositories = ()=> import('@v/Repositories.vue')
 const lifeCycle = ()=> import('@v/lifeCycle.vue')
 const watch = ()=> import('@v/watch.vue')
 const computed = ()=> import('@v/computed.vue')
+const countTest = ()=> import('@v/countTest.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -57,6 +58,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/computed',
     name: 'computed',
     component: computed
+  },
+  {
+    path: '/countTest',
+    name: 'countTest',
+    component: countTest
   },
 ]
 

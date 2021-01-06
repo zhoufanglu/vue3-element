@@ -26,7 +26,6 @@ export default {
     /*const a = ref<number>(1)
     const b = ref<number>(1)*/
     const routerList: any[] = reactive(router.options.routes)
-    console.log(21, routerList)
     return {
       routerList
       /* a,
