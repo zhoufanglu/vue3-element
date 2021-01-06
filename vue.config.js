@@ -30,7 +30,7 @@ module.exports = {
     //host: "192.168.1.107",
     host: "0.0.0.0", //局域网和本地访问
     port: "8080",
-    public: '192.168.7.30:8080',
+    //public: '192.168.7.30:8080',
     hot: true,
     /* 自动打开浏览器 */
     open: false,
@@ -61,7 +61,7 @@ module.exports = {
     },
     patterns: [
       // scss文件路径
-      //path.resolve(__dirname, "src/assets/scss/global.scss")
+      path.resolve(__dirname, "src/assets/scss/global.scss")
     ]
   }
 }
