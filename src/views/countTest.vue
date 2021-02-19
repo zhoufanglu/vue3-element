@@ -6,16 +6,18 @@
   </div>
 </template>
 <script lang="ts">
-import {ref, reactive} from 'vue'
+import {ref, reactive, getCurrentInstance} from 'vue'
 import {useCounter} from "@/views/js/counter"
 import {useMouse} from "@/views/js/mouse"
 
 export default {
   name: 'countTest',
   setup() {
-
     const {add, count, double} = useCounter()
     const {x, double:doubleX } = useMouse()
+
+    const { proxy }:any = getCurrentInstance()
+    console.log(21, proxy.$test)
     //console.log(17, doubleX)
 
     return {

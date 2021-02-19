@@ -9,12 +9,19 @@ const lifeCycle = ()=> import('@v/lifeCycle.vue')
 const watch = ()=> import('@v/watch.vue')
 const computed = ()=> import('@v/computed.vue')
 const countTest = ()=> import('@v/countTest.vue')
+/**********************layout***********************/
+const layout = ()=> import('@v/layout/layout.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    name: 'layout',
+    path: '/layout',
+    component: layout
   },
   {
     path: '/element',

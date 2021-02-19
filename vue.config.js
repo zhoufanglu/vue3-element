@@ -1,7 +1,7 @@
 const path = require("path");
 const resolve = function(dir) {
   // @ts-ignore
-  return path.join(__dirname, dir);
+  return path.join(__dirname, dir)
 };
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "./" : "./",
@@ -61,7 +61,16 @@ module.exports = {
     },
     patterns: [
       // scss文件路径
-      path.resolve(__dirname, "src/assets/scss/global.scss")
+      //path.resolve(__dirname, "./src/assets/scss/entrance.scss")
     ]
+  },
+
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import "~@/assets/scss/entrance.scss";`
+      },
+    }
   }
+
 }

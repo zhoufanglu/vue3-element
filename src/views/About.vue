@@ -13,6 +13,8 @@ export default {
   props: {},
   setup (props:any, context:any) {
     console.log('setUp ... ')
+    const num1:number = 1
+    console.log(17, num1)
   }
 }
 </script>
