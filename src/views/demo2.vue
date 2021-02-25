@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import {ref, toRefs, reactive, computed, watchEffect, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted, onActivated, onRenderTracked, onRenderTriggered} from 'vue'
+import {ref, toRefs, reactive, computed, watchEffect} from 'vue'
 
 interface Person {
   name: string,

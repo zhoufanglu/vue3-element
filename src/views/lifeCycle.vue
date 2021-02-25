@@ -10,6 +10,7 @@
     <div>当前选中的标题：{{tabTitle.currentTitle}}</div>
     <div>-----</div>
     <span>{{refCount}}</span>
+    <span ref="domTest">我是dom</span>
   </div>
 </template>
 
@@ -31,12 +32,14 @@ interface TabTitleProps {
 }
 export default {
   name: "生命周期",
-  setup() {/*
+  setup() {
     console.log('1---setup,组件创建之前')
+    const domTest = ref(null)
     onBeforeMount(()=>{
       console.log('2---onBeforeMount,组件挂载到dom前')
     })
     onMounted(()=>{
+      console.log(43, domTest.value)
       console.log('3---onMounted,组件挂载到dom后')
     })
     //组件更新前后--比如数据更新后，会触发组件更新
@@ -52,7 +55,7 @@ export default {
     })
     onUnmounted(()=>{
       console.log('7---onBeforeUnmount，卸载组件后')
-    })*/
+    })
     const refCount = ref<number>(0)
     refCount.value = 2
 
@@ -66,7 +69,8 @@ export default {
     //可以理解为vue2中的data(){return{}}
     return {
       tabTitle,
-      refCount
+      refCount,
+      domTest
     }
   }
 }

@@ -12,6 +12,9 @@ const countTest = ()=> import('@v/countTest.vue')
 /**********************layout***********************/
 const layout = ()=> import('@v/layout/layout.vue')
 
+const compositionApi = ()=> import('@v/compositionApi.vue')
+
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -70,6 +73,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/countTest',
     name: 'countTest',
     component: countTest
+  },
+  {
+    path: '/compositionApi',
+    name: 'compositionApi',
+    component: compositionApi
   },
 ]
 
