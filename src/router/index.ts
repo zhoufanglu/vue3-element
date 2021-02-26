@@ -13,6 +13,7 @@ const countTest = ()=> import('@v/countTest.vue')
 const layout = ()=> import('@v/layout/layout.vue')
 
 const compositionApi = ()=> import('@v/compositionApi.vue')
+const colorDemo = ()=> import('@v/colorDemo/index.vue')
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -78,6 +79,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/compositionApi',
     name: 'compositionApi',
     component: compositionApi
+  },
+  {
+    path: '/colorDemo',
+    name: 'colorDemo',
+    component: colorDemo
   },
 ]
 
